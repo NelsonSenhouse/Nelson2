@@ -3,40 +3,20 @@ public class Main
     public static void main(String[] args)
     {
         Algorithms a = new Algorithms();
-//      # of digits
-        System.out.println(a.numDigits(987654321));
-        System.out.println(a.numDigits(9));
+//      second param is in first
+        System.out.println(a.isSecString("Hello World!", "o W"));
+        System.out.println(a.isSecString("AP CSA", "CSP"));
         System.out.println();
-//      two params are divisible
-        System.out.println(a.isDivisible(9, 3));
-        System.out.println(a.isDivisible(100, 6));
+//      reverses param
+        System.out.println(a.reverseWord("gohangasalami"));
+        System.out.println(a.reverseWord("hello world"));
         System.out.println();
-//      sum of odd #'s
-        System.out.println(a.oddSum(4, 9));
-        System.out.println(a.oddSum(3, 7));
+//      if param is palindrome
+        System.out.println(a.isPalindrome("amanaplanacanalpanama"));
+        System.out.println(a.isPalindrome("monday"));
         System.out.println();
-//      sum of mults of 10
-        System.out.println(a.multTenSum(10, 99));
-        System.out.println(a.multTenSum(32, 40));
-        System.out.println();
-//      sum of digits
-        System.out.println(a.sumDigits(321));
-        System.out.println(a.sumDigits(123456789));
-        System.out.println();
-//      pow of 2 <= param
-        System.out.println(a.powOfTwo(800));
-        System.out.println(a.powOfTwo(8));
-        System.out.println();
-//      ones digit
-        System.out.println(a.onesDigit(987654321));
-        System.out.println(a.onesDigit(2222223));
-        System.out.println();
-//      param ones digit truncated
-        System.out.println(a.removeOnes(987654321));
-        System.out.println(a.removeOnes(95));
-        System.out.println();
-//      # even digits
-        System.out.println((a.numEvenDigits(123456789)));
-        System.out.println((a.numEvenDigits(13579)));
+//      # of sec param in first
+        System.out.println(a.secInFirst("Mississippi", "si"));
+        System.out.println(a.secInFirst("sspsyehsususssssssssuhuhuhuhueoejsspsphsssss", "s"));
     }
 }

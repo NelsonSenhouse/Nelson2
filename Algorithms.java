@@ -87,4 +87,43 @@ public class Algorithms
         }
         return count;
     }
+//  4.3 Algorithms
+    public boolean isSecString(String str, String secStr)
+    {
+        if (str.indexOf(secStr) != -1)
+        {
+            return true;
+        }
+        return false;
+    }
+    public String reverseWord(String str)
+    {
+        String revWord = "";
+        for(int i = 1; i <= str.length(); i++)
+        {
+            revWord += str.substring(str.length() - i, str.length() - (i - 1));
+        }
+        return revWord;
+    }
+    public boolean isPalindrome(String str)
+    {
+        String revWord = "";
+        for(int i = 1; i <= str.length(); i++)
+        {
+            revWord += str.substring(str.length() - i, str.length() - (i - 1));
+        }
+        return revWord.equals(str);
+    }
+    public int secInFirst(String str, String secStr)
+    {
+        int count = 0;
+        for(int i = 0; i <= str.length() - secStr.length(); i ++)
+        {
+            if(secStr.equals(str.substring(i, i + secStr.length())))
+            {
+                count ++;
+            }
+        }
+        return count;
+    }
 }
