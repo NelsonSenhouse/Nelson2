@@ -1,9 +1,15 @@
+import static java.lang.Math.pow;
+
 public class Algorithms
 {
-//    public int numDigits(int x)
-//    {
-//
-//    }
+    public int numDigits(int x) {
+        int digits = 1;
+        for (int i = 0; Math.pow(10, i) <= x; i++)
+        {
+            digits = i + 1;
+        }
+        return digits;
+    }
     public boolean isDivisible(int x, int y)
     {
         if(x % y == 0)
@@ -40,13 +46,23 @@ public class Algorithms
         }
         return sum;
     }
+    public int sumDigits(int x)
+    {
+        int sum = 0;
+        while(x > 0)
+        {
+            sum += x % 10;
+            x /= 10;
+        }
+        return sum;
+    }
     public int powOfTwo(int x)
     {
         int i = 0;
-        while(Math.pow(2, i) <= x)
+        while(pow(2, i) <= x)
         {
             i ++;
         }
-        return (int)Math.pow(2, i - 1);
+        return (int) pow(2, i - 1);
     }
 }
