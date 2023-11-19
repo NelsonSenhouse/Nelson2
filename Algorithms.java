@@ -2,6 +2,7 @@ import static java.lang.Math.pow;
 
 public class Algorithms
 {
+//  4.1 Algorithms
     public int numDigits(int x) {
         int digits = 1;
         for (int i = 0; Math.pow(10, i) <= x; i++)
@@ -64,5 +65,26 @@ public class Algorithms
             i ++;
         }
         return (int) pow(2, i - 1);
+    }
+    public int onesDigit(int x)
+    {
+        return x % 10;
+    }
+    public int removeOnes(int x)
+    {
+        return x / 10;
+    }
+    public int numEvenDigits(int x)
+    {
+        int count = 0;
+        while(x > 0)
+        {
+            if ((x % 10) % 2 == 0)
+            {
+                count ++;
+            }
+            x /= 10;
+        }
+        return count;
     }
 }
